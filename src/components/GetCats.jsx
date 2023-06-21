@@ -8,7 +8,7 @@ export default function GetCats(){
     const fetchData = async () => {
         try {
           const response = await Cats();
-          setCats(response.data[0]);
+          setCats(response[0].url);
           // console.log(setCats);
         } catch (error) {
           console.log(error);
@@ -22,7 +22,7 @@ export default function GetCats(){
 
     return(
           <div className='cats'>
-          <img src= { cats.url }/>
+          <img src= { cats }/>
           <br></br>
           <button onClick = {fetchData}>
             Generate Cat Image
