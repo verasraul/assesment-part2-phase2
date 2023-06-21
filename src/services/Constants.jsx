@@ -14,7 +14,7 @@ export async function Cats(){
 
 
 export async function Dogs(){
-    const Result = await axios.get(`https://dog.ceo/api/breeds/list/all`)
+    const Result = await axios.get(`https://dog.ceo/api/breeds/image/random`)
     .then(({ data }) => {
         return data;
       });
