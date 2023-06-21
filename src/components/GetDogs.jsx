@@ -8,7 +8,7 @@ export default function GetDogs(){
     const fetchData = async () => {
         try {
           const response = await Dogs();
-          setdogs(response.data.message);
+          setdogs(response.message);
           // console.log(setdogs);
         } catch (error) {
           console.log(error);
@@ -30,13 +30,5 @@ export default function GetDogs(){
         </div>
     )
 }
-
-
-
-
-
-
-
-
 
 
